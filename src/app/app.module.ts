@@ -11,6 +11,7 @@ import { AuthModule } from './auth/auth.module';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DetailsEditorComponent } from './details-editor/details-editor.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     BookComponent,
     CartComponent,
     NavbarComponent,
+    DetailsEditorComponent,
   ],
   imports: [
     BrowserModule,
