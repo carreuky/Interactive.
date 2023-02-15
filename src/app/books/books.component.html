@@ -1,0 +1,12 @@
+<p>Books Info</p>
+
+<div class="flex grid grid-cols-5 text-center gap-4 border">
+  <div>Office</div>
+  <div>Position</div>
+  <div>Name</div>
+  <div>Office</div>
+  <div>Salary</div>
+</div>
+<ng-container  *ngFor="let singleBook of books">
+  <app-book [book]="singleBook"></app-book>
+</ng-container>
