@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-details-editor',
@@ -7,14 +7,19 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./details-editor.component.scss']
 })
 export class DetailsEditorComponent {
+  array: any[]= []
   detailForm = new FormGroup({
-    name: new FormControl(''),
-    password: new FormControl('')
+    name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    location: new FormControl('', [Validators.required])
+ })
 
-  })
-
+ 
   onSubmit() {
-    console.log(this.detailForm.value)
+    this.array.push(this.detailForm.value)
+    console.log(this.array)
+    this.detailForm.reset()
   }
+
+ 
 
 }
