@@ -44,8 +44,15 @@
     </ul>
   </div>
 </div>
-
 </div>
+
+<div>
+  <p>The hero's birthday is {{ birthday | date }}</p>
+</div>
+
+<p>The hero's birthday is {{ birthday | date:format }}</p>
+  <button type="button" (click)="toggleFormat()">Toggle Format</button>
+
 
 
 
