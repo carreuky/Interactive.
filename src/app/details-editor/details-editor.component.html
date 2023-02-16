@@ -36,11 +36,15 @@
       </button>
     </div>
   </form>
+  <div class="mx-2">
+    <div *ngIf="array.length == 0">No books in your cart</div>
   <div class="m-4" *ngIf="array.length">
     <ul *ngFor="let obj of array" >
       <li>{{obj.name}} from {{obj.location}}</li>
     </ul>
   </div>
+</div>
+
 </div>
 
 
